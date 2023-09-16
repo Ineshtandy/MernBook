@@ -95,3 +95,8 @@ STEP 8 : BOOK UPDATION
 / find the filet to be updated using findByIdAndUpdate(id,request.body) -> updates to new body
 / store the returned value from findBy.. fucntion in a variable and check it's validity
 / for valid send status 200 for invalid send status 404 in response
+
+STEP 9 : BOOK DELETION (using delete express method)
+
+/ only id of the record is required
+/ findByIdAndDelete() function

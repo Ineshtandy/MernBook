@@ -128,3 +128,21 @@ mongoose
 //     console.log(error);
 //   }
 // });
+
+// BOOK DELETION
+// app.delete("/book/:id", async (requst, response) => {
+//   try {
+//     const { id } = request.params;
+
+//     const result = await Book.findByIdAndDelete(id);
+
+//     if (!result) {
+//       return response.status(404).send({ message: "book not found" });
+//     }
+
+//     return response.status(200).send({ message: "book deleted" });
+//   } catch (error) {
+//     console.log(error.message);
+//     return response({ message: error.message });
+//   }
+// });
