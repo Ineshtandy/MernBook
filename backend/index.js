@@ -6,7 +6,7 @@ import cors from "cors";
 
 const app = express();
 
-// Middleware for parsing request body
+// Middleware for parsing request body, allows express to use json file
 app.use(express.json());
 
 // Middleware for handling CORS POLICY
@@ -43,3 +43,32 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+// // Route for saving a new book
+// app.post('/books',async(request, response) => {
+//   try{
+//     //validating input coming from request
+//     //checking all required fields and if theyre not present, return a response with a status of 400
+//     if(
+//       !request.body.title ||
+//       !request.body.author ||
+//       !request.body.publishYear
+//     ) {
+//       return response.status(400).send({
+//         message: 'send all required fields: title,author,publishYear'
+//       })
+//     }
+
+//     //variable for new book
+//     const newBook = {
+//       title: request.body.title,
+//       author: request.body.author,
+//       publishYear: request.body.publishYear,
+//     };
+
+//     const book = await Book.create(newBook);
+//   } catch(error){
+//     console.log(error.message);
+//     response.status(500).send({message: error.message});
+//   }
+// });

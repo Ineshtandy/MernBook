@@ -58,3 +58,21 @@ STEP 3 : ADDING A DATABASE
 / use .then and catch (similar to try and catch in java)
 / move get method inside 'then' block meaning we want express server to run only when database connection is successful aka (app.listen method inside then block and then block will only be executed when db connection is successful)
 / 'catch' block simply logs out the error
+
+STEP 4 : CREATING A MODEL AND SCHEMA WITH MONGOOSE LIBRARY FUNCTIONS
+
+/ ?? what is a model
+/ mongoose is a javascript object oriented programming library for mongoDB helping in easy interaction with it using js script commands
+/ to save an object named cat, you need a model for cat and the cat must have a schema ' { name : String} '
+/ model is used to interact with the database
+..storing all models in a models folder in backend
+/ schema making approach is better to make it outside the model method using mongoose.Schema() method
+/ multiple objects go inside a schema
+
+STEP 5 :
+
+/ import book-model to create a book
+/ to save a new book we need a new http route with 'post' type
+/ post method used to create new resource ' app.post(route,callback-func) ' where app is express object
+/ app.use(express.json()) helps express use json files
+/ we cannot use browser for testing post method hence use postman (tool for working with web apis)
