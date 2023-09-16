@@ -21,7 +21,7 @@ npm init - y / adds a package.json file into the folder
     / since express.js variable needs to listen to a port, we create the port in a different file 'config.js' and define the port in that file
     import port into index.js and listen to it using listen function
 
-STEP 2 :
+STEP 2 : CREATING AN HTTP ROUTE (using http method 'get')
 
 ..inside backend folder
 node -v / check the version of the installed node.js
@@ -43,3 +43,18 @@ app.get() / to create a new route for slash route
 / param1 - string for route & param2 - callback function
 / callback function - recieves request and response as params and both can be managed
 ?? response parameter in callback function
+
+STEP 3 : ADDING A DATABASE
+
+/ local or online database can be used for this project
+/ using mongoDB free online database
+/ set up
+/ connect -> drivers -> choose recent version of node.js -> copy connection string to use on server using a variable
+/ use the variable on index.js
+/ for working with mongoDB library we need mongoose library - npm i mongoose
+
+..connection of db
+/ use mongoose.connect(connection url) to connect to db
+/ use .then and catch (similar to try and catch in java)
+/ move get method inside 'then' block meaning we want express server to run only when database connection is successful aka (app.listen method inside then block and then block will only be executed when db connection is successful)
+/ 'catch' block simply logs out the error
