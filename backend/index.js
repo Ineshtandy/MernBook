@@ -31,6 +31,7 @@ app.get("/", (request, response) => {
 
 app.use("/books", booksRoute);
 
+// used to connect to database
 mongoose
   .connect(mongoDBURL)
   .then(() => {
