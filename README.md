@@ -69,10 +69,17 @@ STEP 4 : CREATING A MODEL AND SCHEMA WITH MONGOOSE LIBRARY FUNCTIONS
 / schema making approach is better to make it outside the model method using mongoose.Schema() method
 / multiple objects go inside a schema
 
-STEP 5 :
+STEP 5 : CREATING A BOOK AND PUTTING INTO DATABASE USING A POST METHOD / ROUTE
+
+\*\* post and get methods in expressjs are also referred to as 'routes'
 
 / import book-model to create a book
 / to save a new book we need a new http route with 'post' type
 / post method used to create new resource ' app.post(route,callback-func) ' where app is express object
 / app.use(express.json()) helps express use json files
 / we cannot use browser for testing post method hence use postman (tool for working with web apis)
+
+STEP 6 : GETTING ALL BOOKS FROM DATABASE USING GET METHOD
+
+/ using 'find' function of model to retrieve the data
+/ find({}) is a find function with an empty object, specifying that no particular constraint is required in retrieval, hence all records are retrieved

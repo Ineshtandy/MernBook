@@ -45,6 +45,7 @@ mongoose
   });
 
 // // Route for saving a new book
+
 // app.post('/books',async(request, response) => {
 //   try{
 //     //validating input coming from request
@@ -72,3 +73,15 @@ mongoose
 //     response.status(500).send({message: error.message});
 //   }
 // });
+
+// Route to get all books from the database
+app.get("/books", async (request, response) => {
+  try {
+    const books = await Book.find({});
+
+    return response.status(200).json(books);
+  } catch (error) {
+    console.log(error.message);
+    return response.status(500).send({ message: error.message });
+  }
+});
