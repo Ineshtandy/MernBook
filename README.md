@@ -107,3 +107,21 @@ STEP 10 : CORS policy
 / security mechanism in browsers that restricts the ability of web pages to make requests to a different domain
 / web sec mechanism
 / using cors middleware
+
+FRONT-END
+
+STEP 1 : REACT APP USING VITE, TAILWIND CSS
+
+/ npm create vite@latest -> creates react app
+/ install tailwind css -> steps on tailwind css website
+
+STEP 2 : SPA
+
+/ spa = single page application
+/ for using react router dom, import it
+/ <Routes><Route/>><Route/>></Routes> this is the structure, one main routes holding multiple route elements
+
+HOW TO RUN?
+
+/ install all dependencies using npm i in both frontend and backend folder
+/ open both folders in seperate terminals and npm run dev
