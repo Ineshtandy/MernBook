@@ -83,3 +83,15 @@ STEP 6 : GETTING ALL BOOKS FROM DATABASE USING GET METHOD
 
 / using 'find' function of model to retrieve the data
 / find({}) is a find function with an empty object, specifying that no particular constraint is required in retrieval, hence all records are retrieved
+
+STEP 7 : GETTING A BOOK BY ID
+
+/ retrieving id from route eg: books/:id using request.params
+/ using findById() function
+
+STEP 8 : BOOK UPDATION
+
+/ checking validity of request body required fields to be sent in post
+/ find the filet to be updated using findByIdAndUpdate(id,request.body) -> updates to new body
+/ store the returned value from findBy.. fucntion in a variable and check it's validity
+/ for valid send status 200 for invalid send status 404 in response

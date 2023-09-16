@@ -44,8 +44,7 @@ mongoose
     console.log(error);
   });
 
-// // Route for saving a new book
-
+// ROUTE FOR SAVING A NEW BOOK
 // app.post('/books',async(request, response) => {
 //   try{
 //     //validating input coming from request
@@ -74,14 +73,58 @@ mongoose
 //   }
 // });
 
-// Route to get all books from the database
-app.get("/books", async (request, response) => {
-  try {
-    const books = await Book.find({});
+// ROUTE TO GET ALL BOOKS FROM DB
+// app.get("/books", async (request, response) => {
+//   try {
+//     const books = await Book.find({});
 
-    return response.status(200).json(books);
-  } catch (error) {
-    console.log(error.message);
-    return response.status(500).send({ message: error.message });
-  }
-});
+//     return response.status(200).json(books);
+//   } catch (error) {
+//     console.log(error.message);
+//     return response.status(500).send({ message: error.message });
+//   }
+// });
+
+// ROUTE TO GET BOOK BY ID
+// app.get("/books/:id", async (request, response) => {
+//   try {
+//     const id = request.params.id;
+
+//     const books = await Book.findById(id);
+
+//     return response.status(200).json({
+//       count: books.length,
+//       data: books,
+//     });
+//   } catch (error) {
+//     console.log(error.message);
+//     return response.status(400).send({ message: error.message });
+//   }
+// });
+
+// ROUTE TO UPDATE A BOOK
+// app.put("/books/:id", async (request, response) => {
+//   try {
+//     if (
+//       !request.body.title ||
+//       !request.body.publishYear ||
+//       !request.body.author
+//     ) {
+//       return response.status(400).send({
+//         message: "send all required fields",
+//       });
+//     }
+
+//     const { id } = request.params;
+
+//     const result = await Book.findByIdAndUpdate(id, request.body);
+
+//     if (!result) {
+//       return response.status(404).json({ message: "book not found" });
+//     }
+
+//     return response.status(200).send({message: 'book updated successfully'});
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
