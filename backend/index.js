@@ -29,6 +29,7 @@ app.get("/", (request, response) => {
   return response.status(234).send("Welcome To MERN Stack Tutorial");
 });
 
+//this will tell express that for each route with prefix '/books' using booksRoute, handled by this middleware
 app.use("/books", booksRoute);
 
 // used to connect to database
@@ -44,6 +45,7 @@ mongoose
     console.log(error);
   });
 
+//ALL FUNCTIONS BELOW ARE SENT TO THEIR SEPERATE ROUTER IN ROUTES FOLDER TO PROPERLY SEPERATE THE CODE
 // ROUTE FOR SAVING A NEW BOOK
 // app.post('/books',async(request, response) => {
 //   try{

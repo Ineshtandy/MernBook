@@ -100,3 +100,10 @@ STEP 9 : BOOK DELETION (using delete express method)
 
 / only id of the record is required
 / findByIdAndDelete() function
+
+STEP 10 : CORS policy
+
+/ corss-origin resource sharing
+/ security mechanism in browsers that restricts the ability of web pages to make requests to a different domain
+/ web sec mechanism
+/ using cors middleware
